@@ -7,10 +7,11 @@ import NoteListContent from '../NoteListContent/NoteListContent';
 
 export default class NoteList extends React.Component {
   render() {
+  	const { navigation } = this.props;
     return (
       <View style={{ flex: 1 }}>
-        <NoteListHeader navigation={this.props.navigation} />
-        <NoteListContent />
+        <NoteListHeader navigation={navigation} />
+        <NoteListContent navigation={navigation} />
       </View>
     );
   }
