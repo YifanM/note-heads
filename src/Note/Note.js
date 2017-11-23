@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, Button, View, TextInput, TouchableWithoutFeedback } from 'react-native';
+import { Text, View, TextInput, TouchableWithoutFeedback, StatusBar } from 'react-native';
+import Button from 'react-native-button';
 import { NavigationActions } from 'react-navigation';
 
 import styles from './styles';
@@ -14,14 +15,18 @@ export default class Note extends React.Component {
       ]
     });
     return (
-    	<View style={styles.container}>
-        <TextInput style={styles.size} />
-        <TouchableWithoutFeedback onPress={(e) => console.log(e.nativeEvent.locationX, e.nativeEvent.locationY)}>
+    	<View style={[styles.container, { marginTop: StatusBar.currentHeight }]}>
+        <View style={styles.textInputWrapper}>
+          <TextInput style={styles.textInput} multiline />
+        </View>
+        {/*<TouchableWithoutFeedback onPress={(e) => console.log(e.nativeEvent.locationX, e.nativeEvent.locationY)}>
           <View>
             <Text style={styles.size}>hello</Text>
           </View>
-        </TouchableWithoutFeedback>
-    		<Button title="go back" onPress={() => navigation.dispatch(resetAction)} />
+        </TouchableWithoutFeedback>*/}
+    		<Button onPress={() => navigation.dispatch(resetAction)} style={styles.button}>
+          Save and Exit
+        </Button>
     	</View>
     );
   }

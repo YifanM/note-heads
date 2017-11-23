@@ -7,8 +7,18 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  size: {
-  	height: 200,
-  	width: 200
+  textInputWrapper: {
+  	flex: 1,
+    borderWidth: 2,
+    alignSelf: 'stretch',
+    marginRight: 10,
+    marginLeft: 10
+  },
+  textInput: {
+    flex: 1,
+    alignSelf: 'stretch'
+  },
+  button: {
+    fontSize: 30
   }
 });

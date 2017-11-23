@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, View, Button, StatusBar } from 'react-native';
+import { Text, View, TouchableOpacity, StatusBar } from 'react-native';
 import { NavigationActions } from 'react-navigation';
+import Button from 'react-native-button';
 import styles from './styles';
 
 import CreateNoteModal from '../CreateNoteModal/CreateNoteModal';
@@ -19,7 +20,9 @@ export default class NoteListHeader extends React.Component {
     return (
     	<View style={styles.header}>
 	  		<CreateNoteModal visible={this.state.modalVisible} navigation={navigation} onPress={() => this.setModalVisible(false)} />
-        <Button style={styles.button} title="hello" onPress={() => this.setModalVisible(true)} />
+        <Button style={[styles.button, { marginTop: StatusBar.currentHeight }]} onPress={() => this.setModalVisible(true)}>
+          New Note
+        </Button>
       </View>
     );
   }

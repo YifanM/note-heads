@@ -1,6 +1,9 @@
 import React from 'react';
-import { Text, Button, TextInput, View, Modal } from 'react-native';
+import { Text, TextInput, View, Modal } from 'react-native';
 import { NavigationActions } from 'react-navigation';
+import Button from 'react-native-button';
+
+import styles from './styles';
 
 export default class CreateNoteModal extends React.Component {
   constructor() {
@@ -22,10 +25,12 @@ export default class CreateNoteModal extends React.Component {
         transparent={false}
         visible={visible}
         onRequestClose={() => {}}>
-        <View>
-          <Text>Name your note</Text>
-          <TextInput />
-          <Button title="create" onPress={this.createNote} />
+        <View style={styles.modal}>
+          <Text>Name your note:</Text>
+          <TextInput style={styles.textInput}/>
+          <Button onPress={this.createNote}>
+            Create
+          </Button>
         </View>
       </Modal>
     );
