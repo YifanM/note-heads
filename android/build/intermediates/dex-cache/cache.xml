@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\noteheads\react-native-interactable\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9519186966a59965b926111f7c298b67f26fa034">
+        <dex dex="C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\pre-dexed\debug\noteheads-react-native-interactable-unspecified_8539dfa4d990c5553cae7744a2ca7640bf5f9980.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Yifan\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         optimize="true"
