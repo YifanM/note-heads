@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:1:1-32:12
+ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:1:1-36:12
 	package
 		ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:2:5-28
 		INJECTED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml
@@ -48,7 +48,7 @@ MERGED from [com.facebook.soloader:soloader:0.1.0] C:\Users\Yifan\Documents\GitH
 		INJECTED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:13:5-30:19
+ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:13:5-34:19
 MERGED from [noteheads:react-native-interactable:unspecified] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\noteheads\react-native-interactable\unspecified\AndroidManifest.xml:13:5-16:19
 MERGED from [com.facebook.react:react-native:0.49.5] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.49.5\AndroidManifest.xml:13:5-20
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
@@ -85,10 +85,18 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:26:13-73
 	android:name
 		ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:26:23-70
-activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:29:7-84
+activity#com.noteheads.NoteheadActivity
+ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:29:7-31:18
 	android:name
-		ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:29:17-81
+		ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:30:9-41
+service#com.noteheads.NoteheadService
+ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:32:7-50
+	android:name
+		ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:32:16-47
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:33:7-84
+	android:name
+		ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:33:17-81
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from [noteheads:react-native-fs:unspecified] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\noteheads\react-native-fs\unspecified\AndroidManifest.xml:11:5-81
 	android:name
@@ -98,6 +106,6 @@ ADDED from [noteheads:react-native-interactable:unspecified] C:\Users\Yifan\Docu
 	android:name
 		ADDED from [noteheads:react-native-interactable:unspecified] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\noteheads\react-native-interactable\unspecified\AndroidManifest.xml:11:22-63
 android:uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:1:1-36:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
+IMPLIED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:1:1-36:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
