@@ -10,6 +10,7 @@ export default class NoteList extends React.Component {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
+    {/* Since a press event seems to be unavailable, hacky method use both drag and snap and record time since first drag as a press?*/}
         <Interactable.View
           onSnap={() => console.log("snap")}
           snapPoints={[

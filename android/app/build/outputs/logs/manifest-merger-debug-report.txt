@@ -26,6 +26,7 @@ MERGED from [com.facebook.react:react-native:0.49.5] C:\Users\Yifan\Documents\Gi
 		ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:7:22-75
 uses-sdk
 ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:9:5-11:41
+MERGED from [noteheads:react-native-fs:unspecified] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\noteheads\react-native-fs\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [noteheads:react-native-interactable:unspecified] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\noteheads\react-native-interactable\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.49.5] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.49.5\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
@@ -88,12 +89,14 @@ activity#com.facebook.react.devsupport.DevSettingsActivity
 ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:29:7-84
 	android:name
 		ADDED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:29:17-81
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [noteheads:react-native-fs:unspecified] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\noteheads\react-native-fs\unspecified\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from [noteheads:react-native-fs:unspecified] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\noteheads\react-native-fs\unspecified\AndroidManifest.xml:11:22-78
 uses-permission#android.permission.VIBRATE
 ADDED from [noteheads:react-native-interactable:unspecified] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\noteheads\react-native-interactable\unspecified\AndroidManifest.xml:11:5-66
 	android:name
 		ADDED from [noteheads:react-native-interactable:unspecified] C:\Users\Yifan\Documents\GitHub\note-heads\android\app\build\intermediates\exploded-aar\noteheads\react-native-interactable\unspecified\AndroidManifest.xml:11:22-63
-android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 android:uses-permission#android.permission.READ_PHONE_STATE
 IMPLIED from C:\Users\Yifan\Documents\GitHub\note-heads\android\app\src\main\AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
