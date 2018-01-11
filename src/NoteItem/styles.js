@@ -11,5 +11,8 @@ export default StyleSheet.create({
     margin: 15,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  button: {
+    width: 160,
   }
 });

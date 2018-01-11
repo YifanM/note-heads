@@ -1,30 +1,33 @@
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import Interactable from 'react-native-interactable';
+import { connect } from 'react-redux';
 import styles from './styles';
 
 import NoteItem from '../NoteItem/NoteItem';
 
-export default class NoteList extends React.Component {
+const mapStateToProps = (state) => ({
+  notes: state.notes.list
+})
+
+class NoteListContent extends React.Component {
   render() {
-    const { navigation } = this.props;
+    const { navigation, notes } = this.props;
+    let noteItems = [];
+    if (notes) {
+      noteItems = notes.map((note, index) => (
+        <NoteItem key={note.name} navigation={navigation} name={note.name} index={index} />
+      ));
+    }
+    console.log(notes);
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollContainer}>
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
-          <NoteItem navigation={navigation} />
+          { noteItems }
         </ScrollView>
       </View>
     );
   }
 }
+
+export default connect(mapStateToProps, null)(NoteListContent);

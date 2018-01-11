@@ -27,6 +27,7 @@ export default class App extends Component {
 	}
 
 	handleAppStateChange(nextAppState) {
+		// pass notes.current.content to the note head
 		if (nextAppState === 'background') {
 			Notehead.openNotehead();
 		}
@@ -34,6 +35,13 @@ export default class App extends Component {
 
 	render() {
 		const store = createStore(reducers, applyMiddleware(thunkMiddleware));
+
+		if (module.hot) {
+			module.hot.accept('./src/reducers', () => {
+				const nextReducer = require('./src/reducers/index');
+				store.replaceReducer(nextReducer);
+			});
+		}
 
 		return (
 			<Provider store={store}>
