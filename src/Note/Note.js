@@ -7,6 +7,7 @@ import RNFS from 'react-native-fs';
 
 import styles from './styles';
 import noteActions from '../actions/notes';
+import currentNote from '../currentNote';
 
 const mapStateToProps = (state) => ({
   name: state.notes.current.name,
@@ -38,6 +39,7 @@ class Note extends React.Component {
       .then(() => {
         const { updateCurrentNote } = this.props;
         updateCurrentNote(name, text);
+        currentNote.setNote({ name, content: text });
         navigation.dispatch(resetAction);
       })
       .catch(() => {});

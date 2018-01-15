@@ -19,7 +19,6 @@ class NoteListContent extends React.Component {
         <NoteItem key={note.name} navigation={navigation} name={note.name} index={index} />
       ));
     }
-    console.log(notes);
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollContainer}>

@@ -8,6 +8,11 @@ import RNFS from 'react-native-fs';
 import styles from './styles';
 
 import noteActions from '../actions/notes';
+import currentNote from '../currentNote';
+
+const mapStateToProps = (state) => ({
+  notes: state.notes.list
+});
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -24,8 +29,9 @@ class NoteItem extends React.Component {
   }
 
   handleOpen() {
-    const { navigation, index, openNote } = this.props;
+    const { navigation, index, openNote, notes } = this.props;
     openNote(index);
+    currentNote.setNote(notes[index]);
     navigation.navigate('Note');
   }
 
@@ -56,4 +62,4 @@ class NoteItem extends React.Component {
   }
 }
 
-export default connect(null, mapDispatchToProps)(NoteItem);
+export default connect(mapStateToProps, mapDispatchToProps)(NoteItem);

@@ -20,12 +20,16 @@ public class NoteheadService extends Service {
 
     private WindowManager mWindowManager;
     private View mChatHeadView;
+    private String noteName;
+    private String noteContent;
 
     public NoteheadService() {
     }
 
     @Override
     public IBinder onBind(Intent intent) {
+        Log.d("yifan", intent.getStringExtra("name"));
+        Log.d("yifan", intent.getStringExtra("content"));
         return null;
     }
 

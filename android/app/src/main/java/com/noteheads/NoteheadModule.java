@@ -29,9 +29,11 @@ public class NoteheadModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void openNotehead() {
+  public void openNotehead(String name, String content) {
   	Context context = getReactApplicationContext();
   	Intent intent = new Intent(context, NoteheadService.class);
+  	intent.putExtra("name", name);
+  	intent.putExtra("content", content);
   	context.startService(intent);
   }
 }
