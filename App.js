@@ -1,11 +1,26 @@
-import React from 'react';
-import { View } from 'react-native';
-import { StackNavigator } from 'react-navigation';
-import NoteList from './src/NoteList/NoteList';
-import Note from './src/Note/Note';
+import React, { Component } from 'react';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
 
-export default StackNavigator({
-  initialRouteName: { screen: NoteList, navigationOptions: { header: null } },
-  NoteList: { screen: NoteList, navigationOptions: { header: null } },
-  Note: { screen: Note, navigationOptions: { header: null } },
-});
+import reducers from './src/reducers/index';
+import Navigator from './src/navigator';
+
+export default class App extends Component {
+	render() {
+		const store = createStore(reducers, applyMiddleware(thunkMiddleware));
+
+		if (module.hot) {
+			module.hot.accept('./src/reducers', () => {
+				const nextReducer = require('./src/reducers/index');
+				store.replaceReducer(nextReducer);
+			});
+		}
+
+		return (
+			<Provider store={store}>
+				<Navigator testing />
+			</Provider>
+		);
+	}
+}

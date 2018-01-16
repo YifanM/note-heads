@@ -7,4 +7,10 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  scrollContainer: {
+  	alignSelf: 'stretch',
+  	justifyContent: 'center',
+  	flexDirection: 'row',
+  	flexWrap: 'wrap'
+  }
 });
