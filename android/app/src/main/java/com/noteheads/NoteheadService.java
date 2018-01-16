@@ -10,16 +10,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.util.Log;
-
-import com.noteheads.NoteheadActivity;
-
-// TODO: add onclick that opens a preview of the latest image
+import android.widget.TextView;
 
 public class NoteheadService extends Service {
 
     private WindowManager mWindowManager;
     private View mChatHeadView;
+    private View mNoteView;
     private String noteName;
     private String noteContent;
 
@@ -28,16 +25,22 @@ public class NoteheadService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        Log.d("yifan", intent.getStringExtra("name"));
-        Log.d("yifan", intent.getStringExtra("content"));
         return null;
     }
 
     @Override
-    public void onCreate() {
-        super.onCreate();
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        noteName = intent.getStringExtra("name");
+        noteContent = intent.getStringExtra("content");
+
         // Inflate the chat head layout we created
         mChatHeadView = LayoutInflater.from(this).inflate(R.layout.layout_chat_head, null);
+        TextView mNoteHeadTv = (TextView) mChatHeadView.findViewById(R.id.chat_head_title_tv);
+        mNoteHeadTv.setText(noteName);
+
+        mNoteView = LayoutInflater.from(this).inflate(R.layout.layout_note, null);
+        TextView mNoteTv = (TextView) mNoteView.findViewById(R.id.note_tv);
+        mNoteTv.setText(noteContent);
 
         // Add the view to the window.
         final WindowManager.LayoutParams params = new WindowManager.LayoutParams(
@@ -47,10 +50,20 @@ public class NoteheadService extends Service {
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                 PixelFormat.TRANSLUCENT);
 
+        final WindowManager.LayoutParams noteParams = new WindowManager.LayoutParams(
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.TYPE_PHONE,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+                PixelFormat.TRANSLUCENT);
+
         //Specify the chat head position
         params.gravity = Gravity.TOP | Gravity.LEFT;        //Initially view will be added to top-left corner
         params.x = 0;
         params.y = 100;
+        noteParams.gravity = Gravity.TOP | Gravity.RIGHT;        //Initially view will be added to top-left corner
+        noteParams.x = 0;
+        noteParams.y = 100;
 
         //Add the view to the window
         mWindowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
@@ -58,17 +71,30 @@ public class NoteheadService extends Service {
 
         //Set the close button.
         ImageView closeButton = (ImageView) mChatHeadView.findViewById(R.id.close_btn);
-        closeButton.setOnClickListener(new View.OnClickListener() {
+        ImageView noteCloseButton = (ImageView) mNoteView.findViewById(R.id.note_close_btn);
+        ImageView noteMinButton = (ImageView) mNoteView.findViewById(R.id.note_min_btn);
+
+        View.OnClickListener closeClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //close the service and remove the chat head from the window
                 stopSelf();
             }
-        });
+        };
 
-        //Drag and move chat head using user's touch action.
-        final ImageView chatHeadImage = (ImageView) mChatHeadView.findViewById(R.id.chat_head_profile_iv);
-        chatHeadImage.setOnTouchListener(new View.OnTouchListener() {
+        View.OnClickListener minClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mWindowManager.removeView(mNoteView);
+                mWindowManager.addView(mChatHeadView, params);
+            }
+        };
+
+        closeButton.setOnClickListener(closeClickListener);
+        noteCloseButton.setOnClickListener(closeClickListener);
+        noteMinButton.setOnClickListener(minClickListener);
+
+        View.OnTouchListener touchListener = new View.OnTouchListener() {
             private int lastAction;
             private int initialX;
             private int initialY;
@@ -91,17 +117,14 @@ public class NoteheadService extends Service {
                         lastAction = event.getAction();
                         return true;
                     case MotionEvent.ACTION_UP:
-                        //As we implemented on touch listener with ACTION_MOVE,
-                        //we have to check if the previous action was ACTION_DOWN
-                        //to identify if the user clicked the view or not.
-                        if (lastAction == MotionEvent.ACTION_DOWN) {
-                            //Open the chat conversation click.
-                            Intent intent = new Intent(NoteheadService.this, NoteheadActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-
-                            //close the service and remove the chat heads
-                            stopSelf();
+                        float dx = initialTouchX - event.getRawX();
+                        float dy = initialTouchY - event.getRawY();
+                        float distanceInPx = (float) Math.sqrt(dx * dx + dy * dy);
+                        if (distanceInPx < 25) {
+                            params.x = 0;
+                            params.y = 100;
+                            mWindowManager.removeView(mChatHeadView);
+                            mWindowManager.addView(mNoteView, noteParams);
                         }
                         lastAction = event.getAction();
                         return true;
@@ -117,12 +140,33 @@ public class NoteheadService extends Service {
                 }
                 return false;
             }
-        });
+        };
+
+        mNoteHeadTv.setOnTouchListener(touchListener);
+        return START_STICKY;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (mChatHeadView != null) mWindowManager.removeView(mChatHeadView);
+        if (mChatHeadView != null) {
+            try {
+                mWindowManager.removeView(mChatHeadView);
+            } catch (IllegalArgumentException e) {
+                // chathead not attached
+            }
+        }
+        if (mNoteView != null) {
+            try {
+                mWindowManager.removeView(mNoteView);
+            } catch (IllegalArgumentException e) {
+                // note view not attached
+            }
+        }
     }
 }

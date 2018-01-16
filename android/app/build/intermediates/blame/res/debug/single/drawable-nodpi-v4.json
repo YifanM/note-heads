@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\Yifan\\Documents\\GitHub\\note-heads\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\text_background.xml",
+        "source": "C:\\Users\\Yifan\\Documents\\GitHub\\note-heads\\android\\app\\src\\main\\res\\drawable-nodpi\\text_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Yifan\\Documents\\GitHub\\note-heads\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\note_background.xml",
+        "source": "C:\\Users\\Yifan\\Documents\\GitHub\\note-heads\\android\\app\\src\\main\\res\\drawable-nodpi\\note_background.xml"
+    }
+]

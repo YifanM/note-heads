@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Yifan\\Documents\\GitHub\\note-heads\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
+        "merged": "C:\\Users\\Yifan\\Documents\\GitHub\\note-heads\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_note.xml",
+        "source": "C:\\Users\\Yifan\\Documents\\GitHub\\note-heads\\android\\app\\src\\main\\res\\layout\\layout_note.xml"
+    },
+    {
         "merged": "C:\\Users\\Yifan\\Documents\\GitHub\\note-heads\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\Yifan\\Documents\\GitHub\\note-heads\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_screen_toolbar.xml"
     },
