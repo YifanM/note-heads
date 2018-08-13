@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import Interactable from 'react-native-interactable';
 import { connect } from 'react-redux';
 import styles from './styles';
 

@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "babel-preset-react-native-stage-0": "^1.0.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "babel-preset-react-native": "^5.0.0",
     "jest-expo": "^22.0.0",
     "react-native-cli": "^2.0.1",
     "react-test-renderer": "16.0.0-beta.5"
@@ -22,10 +22,9 @@
   },
   "dependencies": {
     "react": "16.0.0-beta.5",
-    "react-native": "^0.49.5",
+    "react-native": "^0.56.0",
     "react-native-button": "^2.1.0",
     "react-native-fs": "^2.9.7",
-    "react-native-interactable": "^0.1.7",
     "react-navigation": "^1.0.0-beta.19",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
