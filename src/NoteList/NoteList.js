@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Button } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import RNFS from 'react-native-fs';
@@ -50,7 +50,7 @@ class NoteList extends React.Component {
   	const { navigation } = this.props;
 
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, minHeight: 200 }}>
         <NoteListHeader navigation={navigation} />
         <NoteListContent navigation={navigation} />
       </View>

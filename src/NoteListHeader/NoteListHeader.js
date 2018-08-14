@@ -1,7 +1,6 @@
 import React from 'react';
-import { Text, View, TouchableOpacity, StatusBar } from 'react-native';
+import { Text, View, TouchableOpacity, StatusBar, Button, TouchableNativeFeedback } from 'react-native';
 import { NavigationActions } from 'react-navigation';
-import Button from 'react-native-button';
 import styles from './styles';
 
 import CreateNoteModal from '../CreateNoteModal/CreateNoteModal';
@@ -18,11 +17,15 @@ export default class NoteListHeader extends React.Component {
   render() {
   	const { navigation } = this.props;
     return (
-    	<View style={styles.header}>
+    	<View style={{minHeight: 0}}>
 	  		<CreateNoteModal visible={this.state.modalVisible} navigation={navigation} onPress={() => this.setModalVisible(false)} />
-        <Button style={[styles.button, { marginTop: StatusBar.currentHeight }]} onPress={() => this.setModalVisible(true)}>
-          New Note
-        </Button>
+				<TouchableOpacity style={styles.add_button}>
+					<View style={styles.add_button_view}>
+						<Text style={styles.text}>	
+							+
+						</Text>	
+					</View>
+				</TouchableOpacity>
       </View>
     );
   }
