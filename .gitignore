@@ -21,6 +21,9 @@ project.xcworkspace
 .vscode
 
 # Android/IntelliJ
+android/build
+android/app/build
+android/.gradle
 build/
 .idea
 .gradle
