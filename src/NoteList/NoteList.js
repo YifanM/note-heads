@@ -50,7 +50,7 @@ class NoteList extends React.Component {
   	const { navigation } = this.props;
 
     return (
-      <View style={{ flex: 1, minHeight: 200 }}>
+      <View style={{ flex: 1 }}>
         <NoteListHeader navigation={navigation} />
         <NoteListContent navigation={navigation} />
       </View>
