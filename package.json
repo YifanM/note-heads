@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@babel/preset-env": "^7.0.0-rc.1",
-    "babel-preset-react-native": "^5.0.0",
-    "jest-expo": "^22.0.0",
-    "react-native-cli": "^2.0.1",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest": "^23.5.0",
+    "jest-react-native": "^18.0.0",
     "react-test-renderer": "16.0.0-beta.5"
   },
   "scripts": {
@@ -18,11 +17,11 @@
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native"
   },
   "dependencies": {
     "react": "16.0.0-beta.5",
-    "react-native": "^0.56.0",
+    "react-native": "~0.55.2",
     "react-native-button": "^2.1.0",
     "react-native-fs": "^2.9.7",
     "react-navigation": "^1.0.0-beta.19",
