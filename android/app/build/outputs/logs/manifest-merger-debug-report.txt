@@ -5,7 +5,7 @@ INJECTED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\An
 INJECTED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\AndroidManifest.xml:1:1-36:12
 INJECTED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\AndroidManifest.xml:1:1-36:12
 MERGED from [:react-native-fs] C:\Users\Yifan\Documents\Github\note-heads\node_modules\react-native-fs\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-13:12
-MERGED from [com.facebook.react:react-native:0.56.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.56.0.aar\9a735ad03ce1f3ccb2042361be561772\AndroidManifest.xml:2:1-15:12
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\3035f706aadf7450e5eb53a4ba42e448\AndroidManifest.xml:2:1-15:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\256ddc280f546a95ec86853d2ac761bf\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\8e83f001f11b61a9a62c79c329c61e20\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\e188909270a3583e91b23cdc8a1b6f31\AndroidManifest.xml:17:1-22:12
@@ -14,14 +14,14 @@ MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Yifan\.grad
 MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\d8a8e4fae026a0935552e1bdd11c7922\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\24c5961cae162eeecf9df3d0f7a6755b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\textlayoutbuilder-1.0.0.aar\435872072acbc44536f2d9684a179d29\AndroidManifest.xml:10:1-18:12
-MERGED from [com.facebook.fresco:fresco:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fresco-1.9.0.aar\6766b9f84adf92ca48724c40bcf03307\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-1.9.0.aar\50e654e79a1a18d761ba880ce06e9951\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:drawee:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\drawee-1.9.0.aar\fde46791e5db35d1b418859f63d690e3\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-1.9.0.aar\cbd62a369b366297966918598adf3aa2\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-1.9.0.aar\8db20246fbb0b1786eeec8a610aa5d0a\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\soloader-0.3.0.aar\418ab74239b6c1b82b206937a24fe18d\AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.fresco:fresco:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fresco-1.3.0.aar\a8be8074fc5b4f0bea583d2e0084335a\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-1.3.0.aar\8602dd4aa3534e58c375eeed5046e3c9\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\soloader-0.1.0.aar\84956d1580857c1f74f2135b384fa7f8\AndroidManifest.xml:1:1-4:12
 MERGED from [org.webkit:android-jsc:r174650] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\android-jsc-r174650.aar\5a285f3db2a3b5f6f085335562bd85d7\AndroidManifest.xml:1:1-3:12
-MERGED from [com.facebook.fresco:fbcore:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fbcore-1.9.0.aar\7388eb42d8ca8c0b1e4215185de493dd\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\drawee-1.3.0.aar\c92d12998177194ef196b887ef67ea0e\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-1.3.0.aar\9fc6b282e5596eaedd3ca7f6721a550d\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-1.3.0.aar\6eac746f429995f9330af1f3250d072f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fbcore-1.3.0.aar\a9efd586fc010f9cfdc29e527f36ee8c\AndroidManifest.xml:2:1-9:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\112a2feaa5855756de13ec6f45b35973\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\2dfd53a726214e292c2d57bfc979d1b0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ffe9d3c81a85d0460bb52d7ba3432aaf\AndroidManifest.xml:17:1-22:12
@@ -49,8 +49,8 @@ ADDED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\Andro
 		ADDED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\AndroidManifest.xml:7:5-77
-MERGED from [com.facebook.react:react-native:0.56.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.56.0.aar\9a735ad03ce1f3ccb2042361be561772\AndroidManifest.xml:11:5-78
-MERGED from [com.facebook.react:react-native:0.56.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.56.0.aar\9a735ad03ce1f3ccb2042361be561772\AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\3035f706aadf7450e5eb53a4ba42e448\AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\3035f706aadf7450e5eb53a4ba42e448\AndroidManifest.xml:11:5-78
 	android:name
 		ADDED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\AndroidManifest.xml:7:22-75
 uses-sdk
@@ -59,8 +59,8 @@ INJECTED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\An
 INJECTED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\AndroidManifest.xml:9:5-11:41
 MERGED from [:react-native-fs] C:\Users\Yifan\Documents\Github\note-heads\node_modules\react-native-fs\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-fs] C:\Users\Yifan\Documents\Github\note-heads\node_modules\react-native-fs\android\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.56.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.56.0.aar\9a735ad03ce1f3ccb2042361be561772\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.56.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.56.0.aar\9a735ad03ce1f3ccb2042361be561772\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\3035f706aadf7450e5eb53a4ba42e448\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\3035f706aadf7450e5eb53a4ba42e448\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\256ddc280f546a95ec86853d2ac761bf\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\256ddc280f546a95ec86853d2ac761bf\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\8e83f001f11b61a9a62c79c329c61e20\AndroidManifest.xml:20:5-44
@@ -77,20 +77,20 @@ MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Yifan\.gradle\c
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\24c5961cae162eeecf9df3d0f7a6755b\AndroidManifest.xml:20:5-44
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\textlayoutbuilder-1.0.0.aar\435872072acbc44536f2d9684a179d29\AndroidManifest.xml:14:5-16:41
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\textlayoutbuilder-1.0.0.aar\435872072acbc44536f2d9684a179d29\AndroidManifest.xml:14:5-16:41
-MERGED from [com.facebook.fresco:fresco:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fresco-1.9.0.aar\6766b9f84adf92ca48724c40bcf03307\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fresco-1.9.0.aar\6766b9f84adf92ca48724c40bcf03307\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-1.9.0.aar\50e654e79a1a18d761ba880ce06e9951\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-1.9.0.aar\50e654e79a1a18d761ba880ce06e9951\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\drawee-1.9.0.aar\fde46791e5db35d1b418859f63d690e3\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\drawee-1.9.0.aar\fde46791e5db35d1b418859f63d690e3\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-1.9.0.aar\cbd62a369b366297966918598adf3aa2\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-1.9.0.aar\cbd62a369b366297966918598adf3aa2\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-1.9.0.aar\8db20246fbb0b1786eeec8a610aa5d0a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-1.9.0.aar\8db20246fbb0b1786eeec8a610aa5d0a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\soloader-0.3.0.aar\418ab74239b6c1b82b206937a24fe18d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\soloader-0.3.0.aar\418ab74239b6c1b82b206937a24fe18d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:fbcore:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fbcore-1.9.0.aar\7388eb42d8ca8c0b1e4215185de493dd\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.9.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fbcore-1.9.0.aar\7388eb42d8ca8c0b1e4215185de493dd\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fresco-1.3.0.aar\a8be8074fc5b4f0bea583d2e0084335a\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fresco-1.3.0.aar\a8be8074fc5b4f0bea583d2e0084335a\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-1.3.0.aar\8602dd4aa3534e58c375eeed5046e3c9\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-okhttp3-1.3.0.aar\8602dd4aa3534e58c375eeed5046e3c9\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\soloader-0.1.0.aar\84956d1580857c1f74f2135b384fa7f8\AndroidManifest.xml:2:3-70
+MERGED from [com.facebook.soloader:soloader:0.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\soloader-0.1.0.aar\84956d1580857c1f74f2135b384fa7f8\AndroidManifest.xml:2:3-70
+MERGED from [com.facebook.fresco:drawee:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\drawee-1.3.0.aar\c92d12998177194ef196b887ef67ea0e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\drawee-1.3.0.aar\c92d12998177194ef196b887ef67ea0e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-1.3.0.aar\9fc6b282e5596eaedd3ca7f6721a550d\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-1.3.0.aar\9fc6b282e5596eaedd3ca7f6721a550d\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-1.3.0.aar\6eac746f429995f9330af1f3250d072f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\imagepipeline-base-1.3.0.aar\6eac746f429995f9330af1f3250d072f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fbcore-1.3.0.aar\a9efd586fc010f9cfdc29e527f36ee8c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\fbcore-1.3.0.aar\a9efd586fc010f9cfdc29e527f36ee8c\AndroidManifest.xml:5:5-7:41
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\112a2feaa5855756de13ec6f45b35973\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\112a2feaa5855756de13ec6f45b35973\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\2dfd53a726214e292c2d57bfc979d1b0\AndroidManifest.xml:20:5-44
@@ -111,10 +111,10 @@ INJECTED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\An
 		INJECTED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\AndroidManifest.xml
 application
 ADDED from C:\Users\Yifan\Documents\Github\note-heads\android\app\src\main\AndroidManifest.xml:13:5-34:19
-MERGED from [com.facebook.react:react-native:0.56.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.56.0.aar\9a735ad03ce1f3ccb2042361be561772\AndroidManifest.xml:13:5-20
-MERGED from [com.facebook.react:react-native:0.56.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.56.0.aar\9a735ad03ce1f3ccb2042361be561772\AndroidManifest.xml:13:5-20
-MERGED from [com.facebook.soloader:soloader:0.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\soloader-0.3.0.aar\418ab74239b6c1b82b206937a24fe18d\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.3.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\soloader-0.3.0.aar\418ab74239b6c1b82b206937a24fe18d\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\3035f706aadf7450e5eb53a4ba42e448\AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\react-native-0.55.4.aar\3035f706aadf7450e5eb53a4ba42e448\AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.soloader:soloader:0.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\soloader-0.1.0.aar\84956d1580857c1f74f2135b384fa7f8\AndroidManifest.xml:3:3-17
+MERGED from [com.facebook.soloader:soloader:0.1.0] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\soloader-0.1.0.aar\84956d1580857c1f74f2135b384fa7f8\AndroidManifest.xml:3:3-17
 MERGED from [org.webkit:android-jsc:r174650] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\android-jsc-r174650.aar\5a285f3db2a3b5f6f085335562bd85d7\AndroidManifest.xml:2:3-17
 MERGED from [org.webkit:android-jsc:r174650] C:\Users\Yifan\.gradle\caches\transforms-1\files-1.1\android-jsc-r174650.aar\5a285f3db2a3b5f6f085335562bd85d7\AndroidManifest.xml:2:3-17
 	android:label
