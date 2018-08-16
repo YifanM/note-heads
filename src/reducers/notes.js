@@ -1,4 +1,4 @@
-export default (state = { list: [], current: {} }, action) => {
+export default (state = { list: [], current: {}, scrollTo: 0 }, action) => {
 	let newState = JSON.parse(JSON.stringify(state));;
 	switch (action.type) {
 		case ('READ_NOTES'):
@@ -15,6 +15,8 @@ export default (state = { list: [], current: {} }, action) => {
 			newState.current.content = action.content;
 		case ('CREATE_NOTE'):
 			newState.list.push({ name: action.name, content: action.content });
+		case ('SCROLL_TO_NOTE'):
+			newState.scrollTo = action.index;
 		default:
 	}
 	return newState;

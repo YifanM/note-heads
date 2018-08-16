@@ -14,13 +14,12 @@ export default StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    zIndex: 10,
-    elevation: 5
+    elevation: 20
   },
   text: {
     fontSize: 45,
-    marginLeft: 2,
-    marginBottom: 2,
+    marginLeft: 2.5,
+    marginBottom: 2.5,
     color: 'white'
   }
 });

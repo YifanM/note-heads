@@ -2,7 +2,6 @@ import React from 'react';
 import { Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux'
 import { NavigationActions } from 'react-navigation';
-import Button from 'react-native-button';
 import RNFS from 'react-native-fs';
 
 import styles from './styles';
@@ -36,27 +35,49 @@ class NoteItem extends React.Component {
   }
 
   handleDelete() {
-    const { index, deleteNote, name } = this.props;
+    const { index, deleteNote, note } = this.props;
     // delete from RNFS
-    RNFS.unlink(`${RNFS.DocumentDirectoryPath}/${name}.note.txt`)
+    RNFS.unlink(`${RNFS.DocumentDirectoryPath}/${note.name}.note.txt`)
       .then(() => deleteNote(index))
       .catch(() => console.log('error in deleting'));
   }
 
   render() {
-  	const { name } = this.props;
+  	const { note } = this.props;
     return (
       <View>
+        <View style={{
+          flex: 1,
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 20
+        }}>  
+          <Text numberOfLines={1} style={{
+            color: 'black',
+            fontSize: 20,
+            width: 160,
+            textAlign: 'center'
+          }}>
+            {note.name}
+          </Text>
+            <TouchableOpacity style={styles.buttonWrapper} onPress={this.handleDelete}>
+            <View style={{
+              flex: 1,
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Text style={styles.buttonText}>x</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
         <TouchableOpacity onPress={this.handleOpen}>
         	<View style={styles.item}>
-            <Text>{ name }</Text>
+            <View style={{ padding: 20 }}>
+              <Text style={{}} numberOfLines={12}>{note.content}</Text>
+            </View>
         	</View>
         </TouchableOpacity>
-        <View>
-          <Button style={styles.button} onPress={this.handleDelete}>
-            Delete
-          </Button>
-        </View>
       </View>
     );
   }

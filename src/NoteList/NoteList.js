@@ -7,12 +7,17 @@ import styles from './styles';
 
 import NoteListHeader from '../NoteListHeader/NoteListHeader';
 import NoteListContent from '../NoteListContent/NoteListContent';
+import NoteSidebar from '../NoteSidebar/NoteSidebar';
 import noteActions from '../actions/notes';
 
 const mapDispatchToProps = (dispatch) => {
 	return {
     readNotes: (notes) => dispatch(noteActions.readNotes(notes))
   };
+};
+
+const scrollTo = (index) => {
+
 };
 
 class NoteList extends React.Component {
@@ -51,8 +56,11 @@ class NoteList extends React.Component {
 
     return (
       <View style={{ flex: 1 }}>
-        <NoteListHeader navigation={navigation} />
-        <NoteListContent navigation={navigation} />
+        <View style={styles.wrapper}>
+          <NoteSidebar />
+          <NoteListContent navigation={navigation} />
+          <NoteListHeader navigation={navigation} />
+        </View>
       </View>
     );
   }

@@ -4,6 +4,7 @@ import { NavigationActions } from 'react-navigation';
 import styles from './styles';
 
 import CreateNoteModal from '../CreateNoteModal/CreateNoteModal';
+import { BoxShadow } from 'react-native-shadow'; 
 
 export default class NoteListHeader extends React.Component {
 	state = {
@@ -19,7 +20,7 @@ export default class NoteListHeader extends React.Component {
     return (
     	<View style={{minHeight: 0}}>
 	  		<CreateNoteModal visible={this.state.modalVisible} navigation={navigation} onPress={() => this.setModalVisible(false)} />
-				<TouchableOpacity style={styles.add_button}>
+				<TouchableOpacity onPress={() => this.setModalVisible(true)} style={styles.add_button}>
 					<View style={styles.add_button_view}>
 						<Text style={styles.text}>	
 							+
