@@ -18,7 +18,7 @@ export default StyleSheet.create({
   },
   text: {
     fontSize: 45,
-    marginLeft: 2.5,
+    marginLeft: 2,
     marginBottom: 2.5,
     color: 'white'
   }

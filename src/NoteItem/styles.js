@@ -19,7 +19,7 @@ export default StyleSheet.create({
     color: 'white',
     fontSize: 20,
     marginBottom: 5,
-    marginRight: 1
+    marginLeft: 0.5
   },
   buttonWrapper: {
     position: 'absolute',

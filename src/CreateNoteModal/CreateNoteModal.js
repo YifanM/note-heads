@@ -1,7 +1,6 @@
 import React from 'react';
-import { Text, TextInput, View, Modal } from 'react-native';
+import { Text, TextInput, View, Modal, TouchableOpacity, TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView } from 'react-native';
 import { NavigationActions } from 'react-navigation';
-import Button from 'react-native-button';
 import { connect } from 'react-redux';
 import RNFS from 'react-native-fs';
 
@@ -45,16 +44,32 @@ class CreateNoteModal extends React.Component {
     return (
       <Modal
         animationType="slide"
-        transparent={false}
+        transparent={true}
         visible={visible}
-        onRequestClose={() => {}}>
-        <View style={styles.modal}>
-          <Text>Name your note:</Text>
-          <TextInput style={styles.textInput} onChangeText={(text) => this.setState({ fileName: text })} />
-          <Button onPress={this.createNote}>
-            Create
-          </Button>
-        </View>
+        onRequestClose={this.props.onPress}>
+        <TouchableWithoutFeedback style={{ flex: 1 }}onPress={Keyboard.dismiss} accessible={false}>
+          <KeyboardAvoidingView style={styles.modal} behavior={"padding"}>
+              <View>
+                <TouchableOpacity style={styles.buttonWrapper} onPress={this.props.onPress}>
+                    <View style={{
+                      flex: 1,
+                      justifyContent: 'center',
+                      alignItems: 'center'
+                    }}>
+                      <Text style={styles.buttonText}>x</Text>
+                    </View>
+                </TouchableOpacity>
+                <KeyboardAvoidingView style={{ height: 150, width: 300, backgroundColor: '#f9f9f9', elevation: 20 }} behavior="padding">  
+                  <TextInput style={styles.textInput} onChangeText={(text) => this.setState({ fileName: text })} />
+                  <TouchableOpacity disabled={!this.state.fileName} onPress={this.createNote}>
+                    <View style={{}}>
+                      <Text style={{ elevation: 1, color: !this.state.fileName ? '#dddddd' : 'white', fontSize: 20, backgroundColor: !this.state.fileName ? '#eeeeee' : '#17d167', marginBottom: 40, marginLeft: 60, marginRight: 60, textAlign: 'center' }}>Create</Text>
+                    </View>
+                  </TouchableOpacity>
+                </KeyboardAvoidingView>
+              </View>
+          </KeyboardAvoidingView>
+        </TouchableWithoutFeedback>
       </Modal>
     );
   }

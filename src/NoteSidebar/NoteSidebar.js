@@ -10,16 +10,13 @@ class NoteSidebar extends React.Component {
     let noteItems = [];
     if (notes) {
       noteItems = notes.map((note, index) => (
-          <View style={{
-            borderColor: '#eeeeee',
-            borderBottomWidth: 6,
-          }} key={note.name}>
+          <View style={{}} key={note.name}>
             <TouchableOpacity onPress={() => scrollTo(index)}>
                 <View style={{
                     flex: 1,
                     justifyContent: 'center',
                     height: 60,
-                    backgroundColor: '#e6e6e6',
+                    backgroundColor: '#eeeeee',
                 }}>
                     <Text numberOfLines={1} style={styles.text}>{note.name}</Text>
                 </View>
