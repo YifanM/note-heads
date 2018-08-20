@@ -1,6 +1,5 @@
 import React from 'react';
-import { Text, View, TextInput, TouchableWithoutFeedback, StatusBar } from 'react-native';
-import Button from 'react-native-button';
+import { Text, View, TextInput, TouchableWithoutFeedback, StatusBar, TouchableOpacity, Keyboard } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
 import RNFS from 'react-native-fs';
@@ -46,28 +45,37 @@ class Note extends React.Component {
   }
 
   render() {
-  	const { text } = this.props;
+  	const { name, text } = this.props;
     return (
-    	<View style={[styles.container, { marginTop: StatusBar.currentHeight }]}>
-        <View style={styles.textInputWrapper}>
-          <TextInput
-            style={styles.textInput}
-            multiline
-            returnKeyType="none"
-            blurOnSubmit={false}
-            onChangeText={(text) => this.setState({ text })}>
-            { text }
-          </TextInput>
-        </View>
-        {/*<TouchableWithoutFeedback onPress={(e) => console.log(e.nativeEvent.locationX, e.nativeEvent.locationY)}>
-          <View>
-            <Text style={styles.size}>hello</Text>
+    	<View style={[styles.container]}>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss} style={{ flex: 1, alignSelf: 'stretch' }}>
+          <View style={{ flex: 1, alignSelf: 'stretch', alignItems: 'center' }}>
+            <View>
+              <Text style={{ fontSize: 30, textAlign: 'center', marginTop: 20 }}>
+                { name }
+              </Text>
+            </View>
+            <View style={styles.textInputWrapper}>
+              <TextInput
+                underlineColorAndroid="transparent"
+                textAlignVertical="top"
+                style={styles.textInput}
+                multiline
+                returnKeyType="none"
+                blurOnSubmit={false}
+                onChangeText={(text) => this.setState({ text })}>
+                { text }
+              </TextInput>
+            </View>
+            <TouchableOpacity onPress={this.updateNote} style={{ width: 200 }}>
+              <View>
+                <Text style={styles.button}>
+                  Save
+                </Text>
+              </View>
+            </TouchableOpacity>
           </View>
-        </TouchableWithoutFeedback>*/}
-      {/* use rnfs to write current note */}
-    		<Button onPress={this.updateNote} style={styles.button}>
-          Save and Exit
-        </Button>
+        </TouchableWithoutFeedback>
     	</View>
     );
   }

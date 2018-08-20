@@ -47,7 +47,7 @@ class CreateNoteModal extends React.Component {
         transparent={true}
         visible={visible}
         onRequestClose={this.props.onPress}>
-        <TouchableWithoutFeedback style={{ flex: 1 }}onPress={Keyboard.dismiss} accessible={false}>
+        <TouchableWithoutFeedback style={{ flex: 1 }} onPress={Keyboard.dismiss} accessible={false}>
           <KeyboardAvoidingView style={styles.modal} behavior={"padding"}>
               <View>
                 <TouchableOpacity style={styles.buttonWrapper} onPress={this.props.onPress}>

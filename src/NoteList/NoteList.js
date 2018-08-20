@@ -3,6 +3,7 @@ import { View, Button } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import RNFS from 'react-native-fs';
+import moment from 'moment';
 import styles from './styles';
 
 import NoteListHeader from '../NoteListHeader/NoteListHeader';
@@ -16,14 +17,21 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const scrollTo = (index) => {
-
-};
-
 class NoteList extends React.Component {
   componentWillMount() {
     const notesList = [];
     RNFS.readDir(RNFS.DocumentDirectoryPath) // On Android, use "RNFS.DocumentDirectoryPath" (MainBundlePath is not defined)
+      .then((results) => {
+        const newResults = results.map((result) => {
+          return {
+            ...result,
+            mtime: moment(result.mtime)
+          };
+        });
+        return newResults.sort((a, b) => {
+          return b.mtime.diff(a.mtime);
+        });
+      })
       .then((results) => Promise.all(results.map((result) => result.path)))
       .then((pathResults) => {
         const noteFiles = pathResults.filter((file) => {

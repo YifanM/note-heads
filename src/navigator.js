@@ -32,7 +32,8 @@ class ConnectedNavigator extends Component {
 		// nothing is accessible in this method for some reason, all this is a workaround
 
 		const note = currentNote.getNote();
-		if (nextAppState === 'background' && note.name && note.content) {
+		const noteExists = this.props.notes.reduce((acc, curr) => acc || curr.name === note.name, false);
+		if (noteExists, nextAppState === 'background' && note.name && note.content) {
 			Notehead.openNotehead(note.name, note.content);
 		}
 	}
@@ -42,4 +43,8 @@ class ConnectedNavigator extends Component {
 	}
 }
 
-export default connect(null, null)(ConnectedNavigator);
+const mapStateToProps = state => ({
+	notes: state.notes.list
+})
+
+export default connect(mapStateToProps, null)(ConnectedNavigator);

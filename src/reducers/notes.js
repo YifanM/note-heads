@@ -13,10 +13,13 @@ export default (state = { list: [], current: {}, scrollTo: 0 }, action) => {
 		case ('UPDATE_CURRENT_NOTE'):
 			newState.current.name = action.name;
 			newState.current.content = action.content;
+			break;
 		case ('CREATE_NOTE'):
 			newState.list.push({ name: action.name, content: action.content });
+			break;
 		case ('SCROLL_TO_NOTE'):
 			newState.scrollTo = action.index;
+			break;
 		default:
 	}
 	return newState;
