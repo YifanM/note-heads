@@ -33,7 +33,7 @@ class ConnectedNavigator extends Component {
 
 		const note = currentNote.getNote();
 		const noteExists = this.props.notes.reduce((acc, curr) => acc || curr.name === note.name, false);
-		if (noteExists, nextAppState === 'background' && note.name && note.content) {
+		if (noteExists && nextAppState === 'background' && note.name) {
 			Notehead.openNotehead(note.name, note.content);
 		}
 	}
