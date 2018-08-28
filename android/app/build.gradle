@@ -144,6 +144,7 @@ dependencies {
     compile(project(':react-native-svg')) {
         exclude group: "com.android.support", module: "appcompat-v7"
     }
+    compile 'com.github.markushi:circlebutton:1.1'
 }
 
 // Run this once to be able to run the application with BUCK

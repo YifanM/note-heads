@@ -2,43 +2,77 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:id="@+id/chat_head_root"
-    android:layout_height="wrap_content"
     android:gravity="right"
     android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="340dp"
-        android:gravity="right"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:elevation="5dp"
+        android:layout_width="match_parent"
+        android:gravity="end"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <ImageView
+        <at.markushi.ui.CircleButton
             android:id="@+id/note_min_btn"
             android:layout_width="26dp"
             android:layout_height="26dp"
-            android:layout_marginRight="20dp"
-            android:src="@drawable/ic_min"
+            app:cb_color="#ffcb23"
+            app:cb_pressedRingWidth="2dp"
+            android:layout_marginRight="46dp"
+            android:layout_gravity="right"
             tools:ignore="ContentDescription"/>
-        <ImageView
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="53.5dp"
+            android:layout_marginTop="-10dp"
+            android:clickable="false"
+            android:text="_"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+        <at.markushi.ui.CircleButton
             android:id="@+id/note_close_btn"
             android:layout_width="26dp"
             android:layout_height="26dp"
-            android:layout_marginRight="20dp"
-            android:src="@drawable/ic_close"
+            app:cb_color="#ff5151"
+            app:cb_pressedRingWidth="2dp"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="right"
             tools:ignore="ContentDescription"/>
-    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="1dp"
+            android:clickable="false"
+            android:text="x"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </FrameLayout>
 
     <TextView
         android:id="@+id/note_tv"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-14dp"
         android:textColor="#000000"
         android:background="@drawable/note_background"
-        android:padding="10dp"
-        android:layout_centerHorizontal="true"
+        android:padding="16dp"
         tools:ignore="ContentDescription"/>
 </LinearLayout>

@@ -4,13 +4,17 @@ import android.app.Service;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.IBinder;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import at.markushi.ui.CircleButton;
 
 public class NoteheadService extends Service {
 
@@ -30,13 +34,23 @@ public class NoteheadService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        if (intent == null) {
+            return START_STICKY;
+        }
+
         noteName = intent.getStringExtra("name");
         noteContent = intent.getStringExtra("content");
 
         // Inflate the chat head layout we created
         mChatHeadView = LayoutInflater.from(this).inflate(R.layout.layout_chat_head, null);
         TextView mNoteHeadTv = (TextView) mChatHeadView.findViewById(R.id.chat_head_title_tv);
-        mNoteHeadTv.setText(noteName);
+        String noteTitle = "";
+        if (noteName.length() > 5) {
+            noteTitle = noteName.substring(0, 5) + "-";
+        } else {
+            noteTitle = noteName;
+        }
+        mNoteHeadTv.setText(noteTitle);
 
         mNoteView = LayoutInflater.from(this).inflate(R.layout.layout_note, null);
         TextView mNoteTv = (TextView) mNoteView.findViewById(R.id.note_tv);
@@ -52,7 +66,7 @@ public class NoteheadService extends Service {
 
         final WindowManager.LayoutParams noteParams = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.TYPE_PHONE,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                 PixelFormat.TRANSLUCENT);
@@ -60,19 +74,19 @@ public class NoteheadService extends Service {
         //Specify the chat head position
         params.gravity = Gravity.TOP | Gravity.LEFT;        //Initially view will be added to top-left corner
         params.x = 0;
-        params.y = 100;
+        params.y = 50;
         noteParams.gravity = Gravity.TOP | Gravity.RIGHT;        //Initially view will be added to top-left corner
         noteParams.x = 0;
-        noteParams.y = 100;
+        noteParams.y = 50;
 
         //Add the view to the window
         mWindowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
         mWindowManager.addView(mChatHeadView, params);
 
         //Set the close button.
-        ImageView closeButton = (ImageView) mChatHeadView.findViewById(R.id.close_btn);
-        ImageView noteCloseButton = (ImageView) mNoteView.findViewById(R.id.note_close_btn);
-        ImageView noteMinButton = (ImageView) mNoteView.findViewById(R.id.note_min_btn);
+        CircleButton closeButton = (CircleButton) mChatHeadView.findViewById(R.id.close_btn);
+        CircleButton noteCloseButton = (CircleButton) mNoteView.findViewById(R.id.note_close_btn);
+        CircleButton noteMinButton = (CircleButton) mNoteView.findViewById(R.id.note_min_btn);
 
         View.OnClickListener closeClickListener = new View.OnClickListener() {
             @Override
@@ -121,8 +135,6 @@ public class NoteheadService extends Service {
                         float dy = initialTouchY - event.getRawY();
                         float distanceInPx = (float) Math.sqrt(dx * dx + dy * dy);
                         if (distanceInPx < 25) {
-                            params.x = 0;
-                            params.y = 100;
                             mWindowManager.removeView(mChatHeadView);
                             mWindowManager.addView(mNoteView, noteParams);
                         }

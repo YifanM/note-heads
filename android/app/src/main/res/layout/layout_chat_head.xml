@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="65dp"
+    android:layout_width="70dp"
+    android:clipToPadding="false"
+    android:padding="5dp"
+    android:layout_height="75dp"
     android:id="@+id/chat_head_root"
-    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <!--Profile image for the chat head.-->
@@ -15,15 +18,29 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:textColor="#000000"
-        android:background="@drawable/text_background"
+        android:elevation="3dp"
+        android:background="@drawable/notehead_background"
         tools:ignore="ContentDescription"/>
 
-    <!--Close button-->
-    <ImageView
-        android:id="@+id/close_btn"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
-        android:layout_marginLeft="40dp"
-        android:src="@drawable/ic_close"
-        tools:ignore="ContentDescription"/>
+        <at.markushi.ui.CircleButton
+            android:id="@+id/close_btn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="40dp"
+            android:elevation="5dp"
+            app:cb_color="#ff5151"
+            app:cb_pressedRingWidth="2dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="49.4dp"
+        android:elevation="5dp"
+        android:layout_marginTop="1dp"
+        android:clickable="false"
+        android:text="x"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
 </RelativeLayout>

@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class NoteheadModule extends ReactContextBaseJavaModule {
+  private Intent noteheadIntent = null;
 
   public NoteheadModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -30,10 +31,20 @@ public class NoteheadModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void openNotehead(String name, String content) {
-  	Context context = getReactApplicationContext();
-  	Intent intent = new Intent(context, NoteheadService.class);
-  	intent.putExtra("name", name);
-  	intent.putExtra("content", content);
-  	context.startService(intent);
+    Context context = getReactApplicationContext();
+    closeNotehead(name, content);
+  	noteheadIntent = new Intent(context, NoteheadService.class);
+  	noteheadIntent.putExtra("name", name);
+  	noteheadIntent.putExtra("content", content);
+  	context.startService(noteheadIntent);
+  }
+
+  @ReactMethod
+  public void closeNotehead(String name, String content) {
+    if (noteheadIntent != null) {
+        Context context = getReactApplicationContext();
+        context.stopService(noteheadIntent);
+        noteheadIntent = null;
+    }
   }
 }
