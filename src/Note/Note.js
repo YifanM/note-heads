@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TextInput, TouchableWithoutFeedback, StatusBar, TouchableOpacity, Keyboard } from 'react-native';
+import { Text, View, TextInput, TouchableWithoutFeedback, StatusBar, TouchableOpacity, Keyboard, Dimensions } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
 import RNFS from 'react-native-fs';
@@ -51,7 +51,7 @@ class Note extends React.Component {
         <TouchableWithoutFeedback onPress={Keyboard.dismiss} style={{ flex: 1, alignSelf: 'stretch' }}>
           <View style={{ flex: 1, alignSelf: 'stretch', alignItems: 'center' }}>
             <View>
-              <Text style={{ fontSize: 30, textAlign: 'center', marginTop: 20 }}>
+              <Text numberOfLines={1} style={{ width: Dimensions.get('window').width - 40, fontSize: 30, textAlign: 'center', marginTop: 20 }}>
                 { name }
               </Text>
             </View>

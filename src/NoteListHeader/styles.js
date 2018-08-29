@@ -9,7 +9,7 @@ export default StyleSheet.create({
   add_button: {
     backgroundColor: '#17d167',
     position: 'absolute',
-    top: 20,
+    bottom: 20,
     right: 20,
     width: 60,
     height: 60,

@@ -56,7 +56,7 @@ class NoteItem extends React.Component {
           <Text numberOfLines={1} style={{
             color: 'black',
             fontSize: 20,
-            width: 160,
+            width: 140,
             textAlign: 'center'
           }}>
             {note.name}

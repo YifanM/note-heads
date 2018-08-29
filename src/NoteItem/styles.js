@@ -24,7 +24,7 @@ export default StyleSheet.create({
   buttonWrapper: {
     position: 'absolute',
     top: 16,
-    right: 205,
+    right: Dimensions.get('window').width / 2,
     elevation: 25,
     width: 30,
     height: 30,
